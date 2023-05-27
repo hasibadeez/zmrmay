@@ -37,11 +37,11 @@ start_aria2_listener()
 async def stats(_, message):
     if await aiopath.exists('.git'):
         last_commit = (await cmd_exec("git log -1 --date=short --pretty=format:'%cr'", True))[0]
-        version = (await cmd_exec("git describe --abbrev=0 --tags", True))[0]
+        #version = (await cmd_exec("git describe --abbrev=0 --tags", True))[0]
         change_log = (await cmd_exec("git log -1 --pretty=format:'%s'", True))[0]
     else:
         last_commit = 'No UPSTREAM_REPO'
-        version = 'N/A'
+        #version = 'N/A'
         change_log = 'N/A'
 
     sysTime = get_readable_time(time() - boot_time())
