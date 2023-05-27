@@ -99,7 +99,7 @@ async def stats(_, message):
             f'<code>Leech     : {TGL}</code> <b>GB</b>\n' \
             f'<code>MEGA      : {MGA}</code> <b>GB</b>\n' \
             f'<code>User Tasks: {UMT}</code>\n' \
-            f'<code>Bot Tasks : {BMT}</code>' \
+            f'<code>Bot Tasks : {BMT}</code>'
     reply_message = await sendMessage(message, stats)
     await auto_delete_message(message, reply_message)
 
