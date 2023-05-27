@@ -58,17 +58,17 @@ async def stats(_, message):
     swap = swap_memory()
     mem_p = memory.percent
 
-    DIR = 'Unlimited' if config_dict['DIRECT_LIMIT'] == '' else config_dict['DIRECT_LIMIT']
-    YTD = 'Unlimited' if config_dict['YTDLP_LIMIT'] == '' else config_dict['YTDLP_LIMIT']
-    GDL = 'Unlimited' if config_dict['GDRIVE_LIMIT'] == '' else config_dict['GDRIVE_LIMIT']
-    TOR = 'Unlimited' if config_dict['TORRENT_LIMIT'] == '' else config_dict['TORRENT_LIMIT']
-    CLL = 'Unlimited' if config_dict['CLONE_LIMIT'] == '' else config_dict['CLONE_LIMIT']
-    MGA = 'Unlimited' if config_dict['MEGA_LIMIT'] == '' else config_dict['MEGA_LIMIT']
-    TGL = 'Unlimited' if config_dict['LEECH_LIMIT'] == '' else config_dict['LEECH_LIMIT']
-    UMT = 'Unlimited' if config_dict['USER_MAX_TASKS'] == '' else config_dict['USER_MAX_TASKS']
-    BMT = 'Unlimited' if config_dict['QUEUE_ALL'] == '' else config_dict['QUEUE_ALL']
+    DIR = 'Unlimited' if config_dict['DIRECT_LIMIT'] == '40' else config_dict['DIRECT_LIMIT']
+    YTD = 'Unlimited' if config_dict['YTDLP_LIMIT'] == '25' else config_dict['YTDLP_LIMIT']
+    GDL = 'Unlimited' if config_dict['GDRIVE_LIMIT'] == '40' else config_dict['GDRIVE_LIMIT']
+    TOR = 'Unlimited' if config_dict['TORRENT_LIMIT'] == '30' else config_dict['TORRENT_LIMIT']
+    CLL = 'Unlimited' if config_dict['CLONE_LIMIT'] == '40' else config_dict['CLONE_LIMIT']
+    MGA = 'Unlimited' if config_dict['MEGA_LIMIT'] == '5' else config_dict['MEGA_LIMIT']
+    TGL = 'Unlimited' if config_dict['LEECH_LIMIT'] == '2' else config_dict['LEECH_LIMIT']
+    UMT = 'Unlimited' if config_dict['USER_MAX_TASKS'] == '2' else config_dict['USER_MAX_TASKS']
+    BMT = 'Unlimited' if config_dict['QUEUE_ALL'] == '4' else config_dict['QUEUE_ALL']
 
-    stats = f'<b><i><u>Zee Bot Statistics</u></i></b>\n\n'\
+    stats = f'<b><i><u>HGDM Bot Statistics</u></i></b>\n\n'\
             f'<b><i><u>Repo Info</u></i></b>\n' \
             f'<b>Updated:</b> <code>{last_commit}</code>\n' \
             f'<b>Version:</b> <code>{version}</code>\n' \
@@ -122,10 +122,10 @@ async def start(_, message):
     elif config_dict['DM_MODE']:
         start_string = 'Bot Started.\n' \
                        'Now I can send your stuff here.\n' \
-                       'Use me here: @Z_Mirror'
+                       'Ask The Owner To Join Group to use me'
     else:
         start_string = 'Sorry, you cant use me here!\n' \
-                       'Join @Z_Mirror to use me.\n' \
+                       'Ask The Owner To Join Group to use me.\n' \
                        'Thank You'
     await sendMessage(message, start_string)
 
@@ -153,7 +153,7 @@ async def ping(_, message):
     await editMessage(reply, f'{ping_time} ms')
 
 async def log(_, message):
-    await sendFile(message, 'Z_Logs.txt')
+    await sendFile(message, 'HGDMB_Logs.txt')
 
 help_string = f'''
 <b>NOTE: Click on any CMD to see more detalis.</b>
