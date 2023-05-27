@@ -70,7 +70,7 @@ async def stats(_, message):
 
     stats = f'<b><i><u>HGDM Bot Statistics</u></i></b>\n\n'\
             f'<b><i><u>Repo Info</u></i></b>\n' \
-            f'<b>Updated:</b> <code>{last_commit}</code>\n' \
+            f'<b>Updated:</b> <code>{last_commit}</code>\n\n' \
             #f'<b>Version:</b> <code>{version}</code>\n' \
             #f'<b>Change Log:</b> <code>{change_log}</code>\n\n' \
             f'<b><i><u>Bot Info</u></i></b>\n' \
