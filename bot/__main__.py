@@ -70,7 +70,7 @@ async def stats(_, message):
 
     stats = f'<b><i><u>HGDM Bot Statistics</u></i></b>\n\n'\
             f'<b><i><u>Repo Info</u></i></b>\n' \
-            f'<b>Updated:</b> <code>{last_commit}</code>\n\n' \
+            f'<b>Updated:</b> <code>{last_commit}</code>\n' \
             f'<b>Version:</b> <code>{version}</code>\n' \
             f'<b>Change Log:</b> <code>{change_log}</code>\n\n' \
             f'<b><i><u>Bot Info</u></i></b>\n' \
@@ -99,7 +99,7 @@ async def stats(_, message):
             f'<code>Leech     : {TGL}</code> <b>GB</b>\n' \
             f'<code>MEGA      : {MGA}</code> <b>GB</b>\n' \
             f'<code>User Tasks: {UMT}</code>\n' \
-            f'<code>Bot Tasks : {BMT}</code>'
+            f'<code>Bot Tasks : {BMT}</code>' \
     reply_message = await sendMessage(message, stats)
     await auto_delete_message(message, reply_message)
 
