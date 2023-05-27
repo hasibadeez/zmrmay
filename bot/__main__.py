@@ -38,11 +38,11 @@ async def stats(_, message):
     if await aiopath.exists('.git'):
         last_commit = (await cmd_exec("git log -1 --date=short --pretty=format:'%cr'", True))[0]
         #version = (await cmd_exec("git describe --abbrev=0 --tags", True))[0]
-        change_log = (await cmd_exec("git log -1 --pretty=format:'%s'", True))[0]
+        #change_log = (await cmd_exec("git log -1 --pretty=format:'%s'", True))[0]
     else:
         last_commit = 'No UPSTREAM_REPO'
         #version = 'N/A'
-        change_log = 'N/A'
+        #change_log = 'N/A'
 
     sysTime = get_readable_time(time() - boot_time())
     botTime = get_readable_time(time() - botStartTime)
@@ -72,7 +72,7 @@ async def stats(_, message):
             f'<b><i><u>Repo Info</u></i></b>\n' \
             f'<b>Updated:</b> <code>{last_commit}</code>\n' \
             #f'<b>Version:</b> <code>{version}</code>\n' \
-            f'<b>Change Log:</b> <code>{change_log}</code>\n\n' \
+            #f'<b>Change Log:</b> <code>{change_log}</code>\n\n' \
             f'<b><i><u>Bot Info</u></i></b>\n' \
             f'<b>SYS UPTM:</b> <code>{sysTime}</code>\n' \
             f'<b>BOT UPTM:</b> <code>{botTime}</code>\n\n' \
