@@ -374,13 +374,13 @@ class MirrorLeechListener:
         msg += f"\n\n<b>Upload</b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path</b>: <code>{rclonePath}</code>'
         msg_ = '\n\n<b>Links has been sent in your DM.</b>'
-        msg_ = '\n\n<b>Now Uninstall TG & Enjoy ur Life.</b>'
+        msg_ = '\n\n<b>Links has been sent in your DM Now Uninstall TG & Enjoy ur Life.</b>'
         buttons = ButtonMaker()
         if self.isLeech:
             msg += f'\n\n<b>Total Files</b>: {folders}\n'
             if mime_type != 0:
                 msg += f'\n\n<b>Corrupted Files</b>: {mime_type}\n'
-            msg_ = '\n\n<b>Files has been sent in your DM.</b>'
+            msg_ = '\n\n<b>Files has been sent in your DM Now Uninstall TG & Enjoy ur Life.</b>'
             if not self.dmMessage:
                 if not files:
                     await sendMessage(self.message, lmsg + msg)
