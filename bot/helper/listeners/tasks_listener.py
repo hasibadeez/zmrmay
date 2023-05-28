@@ -381,7 +381,7 @@ class MirrorLeechListener:
             msg += f'\n\n<b>Total Files</b>: {folders}\n'
             if mime_type != 0:
                 msg += f'\n\n<b>Corrupted Files</b>: {mime_type}\n'
-            msg_ = '\n\n<b>Files has been sent in your DM.<b>\nNow Uninstall TG & Enjoy ur Life.</b>'
+            msg_ = '\n\n<b>Files has been sent in your DM.\nNow Uninstall TG & Enjoy ur Life.</b>'
             if not self.dmMessage:
                 if not files:
                     await sendMessage(self.message, lmsg + msg)
